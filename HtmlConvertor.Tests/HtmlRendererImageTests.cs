@@ -39,8 +39,7 @@ namespace HtmlConvertor.Tests
         {
             var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             using var htmlRenderer = new HtmlRenderer(new Uri("https://www.google.com/"), path);
-            var image = htmlRenderer.ConvertElementToImage("//body");
-            var s = Convert.ToBase64String(image);
+            byte[] image = htmlRenderer.ConvertElementToImage(xpath:"//body");
             Assert.True(image is { Length: > 0 });
         }
 
@@ -49,7 +48,7 @@ namespace HtmlConvertor.Tests
         {
             var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             using var htmlRenderer = new HtmlRenderer(new Uri("https://www.google.com/"), path);
-            var images = htmlRenderer.ConvertElementsToImages("//input[@type='text'] ")
+            var images = htmlRenderer.ConvertElementsToImages(xpath:"//input[@type='text']")
                 .ToList();
             Assert.True(images.Any() && images.All(p => p is { Length: > 0 }));
         }

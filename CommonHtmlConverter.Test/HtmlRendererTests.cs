@@ -2,10 +2,10 @@
 using System.IO;
 using System.Net;
 using CommonHtmlConverter.Converters;
-using CommonHtmlConverter.Tests.TestData;
+using CommonHtmlConverter.Test.TestData;
 using Xunit;
 
-namespace CommonHtmlConverter.Tests
+namespace CommonHtmlConverter.Test
 {
     public class HtmlRendererTests
     {

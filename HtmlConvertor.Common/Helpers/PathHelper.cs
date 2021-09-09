@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace EasyHtmlConverter.Common.Helpers
+namespace CommonHtmlConverter.Helpers
 {
     public static class PathHelper
     {

@@ -5,7 +5,7 @@ using System.Reflection;
 using CommonHtmlConverter.Converters;
 using Xunit;
 
-namespace CommonHtmlConverter.Tests
+namespace CommonHtmlConverter.Test
 {
     public class HtmlRendererImageTests
     {

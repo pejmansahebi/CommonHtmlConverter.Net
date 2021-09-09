@@ -3,7 +3,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using OpenQA.Selenium;
 
-namespace EasyHtmlConverter.Common.Helpers
+namespace CommonHtmlConverter.Helpers
 {
     public static class ImageHelper
     {

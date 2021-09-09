@@ -1,4 +1,4 @@
-﻿namespace EasyHtmlConverter.Common.DriverFactories
+﻿namespace CommonHtmlConverter.DriverFactories
 {
     public abstract class WebDriverFactoryBase
     {

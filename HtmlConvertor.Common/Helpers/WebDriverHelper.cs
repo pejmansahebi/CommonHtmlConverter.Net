@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using EasyHtmlConverter.Common.DriverFactories;
+using CommonHtmlConverter.DriverFactories;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using WDSE;
 using WDSE.Decorators;
 using WDSE.ScreenshotMaker;
 
-namespace EasyHtmlConverter.Common.Helpers
+namespace CommonHtmlConverter.Helpers
 {
     public class WebDriverHelper
     {

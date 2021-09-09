@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using EasyHtmlConverter.Common.Enums;
-using EasyHtmlConverter.Common.Helpers;
+using CommonHtmlConverter.Enums;
+using CommonHtmlConverter.Helpers;
 
-namespace EasyHtmlConverter.Common.Converters
+namespace CommonHtmlConverter.Converters
 {
     public class HtmlRenderer : IDisposable
     {

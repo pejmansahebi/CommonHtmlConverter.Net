@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HtmlConvertor.Common.DriverFactories
+namespace EasyHtmlConverter.Common.DriverFactories
 {
     public class WebDriverFactory : WebDriverFactoryBase
     {

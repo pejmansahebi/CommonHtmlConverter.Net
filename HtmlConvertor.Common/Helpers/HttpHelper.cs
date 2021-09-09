@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace HtmlConvertor.Common.Helpers
+namespace EasyHtmlConverter.Common.Helpers
 {
     public class HttpHelper
     {

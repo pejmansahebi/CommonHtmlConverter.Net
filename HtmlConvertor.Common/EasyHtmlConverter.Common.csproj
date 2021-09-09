@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <PackageId>HtmlConvertor</PackageId>
+    <Authors>pejman sahebi</Authors>
+    <Product>EasyHtmlConverter</Product>
+    <Company>EasyHtmlConverter</Company>
+    <Description>The converter offers a lot of powerful options (convert any web page to image, convert any HTML string to image) it can be used to convert HTML strings that support html5/CSS and any javascript libraries that attach to the HTML page in the CDN server</Description>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/pejmansahebi/HtmlConvertor</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pejmansahebi/HtmlConvertor.git</RepositoryUrl>
+    <RepositoryType>class library</RepositoryType>
+    <PackageTags>HTML Image Selenium</PackageTags>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseFile>licence.txt</PackageLicenseFile>
+    <PackageIcon>html-128.png</PackageIcon>
+    <PackageIconUrl />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Converters\" />
+    <Folder Include="Enums\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Noksa.WebDriver.ScreenshotsExtensions" Version="0.1.5.3" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="html-128.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="licence.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

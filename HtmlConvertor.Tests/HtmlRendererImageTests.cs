@@ -2,10 +2,10 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using HtmlConvertor.Common.Convertors;
+using EasyHtmlConverter.Common.Converters;
 using Xunit;
 
-namespace HtmlConvertor.Tests
+namespace EasyHtmlConverter.Tests
 {
     public class HtmlRendererImageTests
     {

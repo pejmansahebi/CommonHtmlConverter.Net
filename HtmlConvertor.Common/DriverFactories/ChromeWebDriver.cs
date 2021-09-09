@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace HtmlConvertor.Common.DriverFactories
+namespace EasyHtmlConverter.Common.DriverFactories
 {
     public class ChromeWebDriver : IWebDriverFactory
     {

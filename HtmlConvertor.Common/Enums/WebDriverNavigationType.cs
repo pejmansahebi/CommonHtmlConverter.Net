@@ -1,4 +1,4 @@
-﻿namespace HtmlConvertor.Common.Enums
+﻿namespace EasyHtmlConverter.Common.Enums
 {
     public enum WebDriverNavigationType
     {

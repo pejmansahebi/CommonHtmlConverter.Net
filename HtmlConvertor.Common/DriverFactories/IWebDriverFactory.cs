@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace HtmlConvertor.Common.DriverFactories
+namespace EasyHtmlConverter.Common.DriverFactories
 {
     public interface IWebDriverFactory
     {

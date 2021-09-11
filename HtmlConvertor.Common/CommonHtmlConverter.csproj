@@ -6,7 +6,7 @@
     <Authors>pejman sahebi</Authors>
     <Product>CommonHtmlConverter</Product>
     <Company>CommonHtmlConverter</Company>
-    <Description>The converter offers a lot of powerful options (convert any web page or any html string  to image or pdf) 
+    <Description>The converter offers a lot of powerful options (convert any web page or html string to image or pdf) 
 
 it can be used to convert HTML strings that support html5/CSS and any javascript libraries that attach to the HTML page in the server.
 
@@ -22,6 +22,7 @@ first Install-Package Selenium.WebDriver.ChromeDriver package in your applicatio
     <PackageLicenseFile>licence.txt</PackageLicenseFile>
     <PackageIcon>html-128.png</PackageIcon>
     <PackageIconUrl />
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

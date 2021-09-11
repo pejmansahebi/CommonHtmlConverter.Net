@@ -13,15 +13,15 @@ First Install-Package Selenium.WebDriver.ChromeDriver package in your applicatio
 * [Selenium.WebDriver.ChromeDriver](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver)
 > install this package is so important
 > 
-# Uses for console application
+## Uses for console application
 The first sample is convert google body element to image so you can easily use this code in your program.cs file
 ```csharp
   class Program
   {
       static void Main(string[] args)
       {
-          var consoleAppPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-          using var htmlRenderer = new HtmlRenderer(new Uri("https://www.google.com/"), consoleAppPath);
+          var driverPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+          using var htmlRenderer = new HtmlRenderer(new Uri("https://www.google.com/"), driverPath);
           var image = htmlRenderer.ConvertElementToImage(xpath: "//body");
 
           using MemoryStream ms = new MemoryStream(image);
@@ -31,10 +31,10 @@ The first sample is convert google body element to image so you can easily use t
    }
 ```
 
-# google.png file
+## google.png file
 [![google image](https://github.com/pejmansahebi/CommonHtmlConverter.Net/blob/master/HtmlConvertor.Common/assets/images/google.png)](https://github.com/pejmansahebi/CommonHtmlConverter.Net/edit/master/README.md)
 
-# Second example
+## Second example
 The second example is convert html string variable to images, there are two h1 elements in html string variable so out put is two byte array types that are eventually saved in the image(0).png and image(1).png
 ```csharp
     class Program
@@ -43,8 +43,8 @@ The second example is convert html string variable to images, there are two h1 e
         {
             string html =
                 "<html><head><style>.h1Styles{color:red}</style></head><body><h1 class='h1Styles'>common html convertor</h1><h1 class='h1Styles'>pejman sahebi</h1></body></html>";
-            var consoleAppPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            using var htmlRenderer = new HtmlRenderer(html, consoleAppPath);
+            var driverPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            using var htmlRenderer = new HtmlRenderer(html, driverPath);
             var images = htmlRenderer.ConvertElementsToImages(xpath: "//h1");
 
             int imageIndex = 1;
@@ -58,4 +58,6 @@ The second example is convert html string variable to images, there are two h1 e
         }
     }
 ```
-
+## 📝 Important notes
+>- this package use selenium chrome driver so you must be install [requirements-to-run](https://github.com/pejmansahebi/CommonHtmlConverter.Net#-requirements-to-run)
+>- driverPath variable: actually driver path is path of chrome driver in your system or server so its values is depended on your application

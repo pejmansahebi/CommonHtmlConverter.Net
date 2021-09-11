@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Threading;
 using CommonHtmlConverter.DriverFactories;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using WDSE;
 using WDSE.Decorators;
 using WDSE.ScreenshotMaker;
@@ -12,41 +16,49 @@ namespace CommonHtmlConverter.Helpers
 {
     public class WebDriverHelper
     {
-        public static byte[] GetImage(string fileName, string driverPath, string xpath)
+        public static byte[] GetImage(object webPage, string driverPath, string xpath)
         {
-            var driver = GetDriver(fileName, driverPath);
+            ChromeDriver driver = webPage switch
+            {
+                string fileName => GetDriver(fileName, driverPath),
+                Uri uri => GetDriver(uri, driverPath),
+                _ => throw new ArgumentException(nameof(webPage))
+            };
             var desktopScreenShot = TakFullPageScreenShot(driver);
             var image = GetDriverImage(driver, xpath, desktopScreenShot);
             driver.Close();
             driver.Quit();
             return image;
         }
-        public static byte[] GetImage(Uri uri, string driverPath, string xpath)
+
+        public static IEnumerable<byte[]> GetImages(object webPage, string driverPath, string xpath)
         {
-            var driver = GetDriver(uri, driverPath);
-            var desktopScreenShot = TakFullPageScreenShot(driver);
-            var image = GetDriverImage(driver, xpath, desktopScreenShot);
-            driver.Close();
-            driver.Quit();
-            return image;
-        }
-        public static IEnumerable<byte[]> GetImages(string fileName, string driverPath, string xpath)
-        {
-            var driver = GetDriver(fileName, driverPath);
+            ChromeDriver driver = webPage switch
+            {
+                string fileName => GetDriver(fileName, driverPath),
+                Uri uri => GetDriver(uri, driverPath),
+                _ => throw new ArgumentException(nameof(webPage))
+            };
+
             var desktopScreenShot = TakFullPageScreenShot(driver);
             var images = GetDriverImages(driver, xpath, desktopScreenShot).ToList();
             driver.Close();
             driver.Quit();
             return images;
         }
-        public static IEnumerable<byte[]> GetImages(Uri uri, string driverPath, string xpath)
+
+        public static byte[] GetPdf(object webPage, string driverPath, Dictionary<string, object> printOptions)
         {
-            var driver = GetDriver(uri, driverPath);
-            var desktopScreenShot = TakFullPageScreenShot(driver);
-            var images = GetDriverImages(driver, xpath, desktopScreenShot).ToList();
-            driver.Close();
-            driver.Quit();
-            return images;
+            ChromeDriver driver = webPage switch
+            {
+                string fileName => GetDriver(fileName, driverPath),
+                Uri uri => GetDriver(uri, driverPath),
+                _ => throw new ArgumentException(nameof(webPage))
+            };
+
+            var printOutput = driver.ExecuteChromeCommandWithResult("Page.printToPDF", printOptions) as Dictionary<string, object>;
+            var pdfStr = printOutput["data"] as string ?? string.Empty;
+            return Convert.FromBase64String(pdfStr);
         }
 
         private static byte[] GetDriverImage(ChromeDriver driver, string mustImageXPath, Screenshot screenShot)

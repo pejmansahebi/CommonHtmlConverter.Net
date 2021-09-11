@@ -61,7 +61,15 @@ namespace CommonHtmlConverter.Converters
                 _ => throw new ArgumentException(nameof(WebDriverNavigationType))
             };
         }
-
+        public byte[] ConvertToPdf(Dictionary<string, object> printOptions)
+        {
+            return _webDriverNavigationType switch
+            {
+                WebDriverNavigationType.File => WebDriverHelper.GetPdf(FileName, _chromeDriverPath, printOptions),
+                WebDriverNavigationType.Uri => WebDriverHelper.GetPdf(Uri, _chromeDriverPath, printOptions),
+                _ => throw new ArgumentException(nameof(WebDriverNavigationType))
+            };
+        }
         public void Dispose()
         {
             if (!string.IsNullOrEmpty(FileName))
@@ -69,5 +77,7 @@ namespace CommonHtmlConverter.Converters
                 File.Delete(FileName);
             }
         }
+
+
     }
 }

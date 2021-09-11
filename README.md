@@ -13,7 +13,7 @@ First Install-Package Selenium.WebDriver.ChromeDriver package in your applicatio
 * [Selenium.WebDriver.ChromeDriver](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver)
 > install this package is so important
 > 
-## Uses for console application
+## First example
 The first sample is convert google body element to image so you can easily use this code in your program.cs file
 ```csharp
   class Program

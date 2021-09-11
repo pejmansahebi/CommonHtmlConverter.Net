@@ -15,11 +15,17 @@ namespace CommonHtmlConverter.Test
                                        "</body>" +
                                        "</html>";
 
+        private readonly string _path;
+
+        public HtmlRendererImageTests()
+        {
+            _path= Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        }
+
         [Fact]
         public void HtmlRendererFile_Should_ConvertElementOfHtml_To_ImageByteArray()
         {
-            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            using var htmlRenderer = new HtmlRenderer(HtmlStr, path);
+            using var htmlRenderer = new HtmlRenderer(HtmlStr, _path);
             var image = htmlRenderer.ConvertElementToImage("//*[contains(@class,'must-be-image')]");
             Assert.True(image is { Length: > 0 });
         }
@@ -27,8 +33,7 @@ namespace CommonHtmlConverter.Test
         [Fact]
         public void HtmlRendererFile_Should_ConvertElementsOfHtml_To_ImageByteArray()
         {
-            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            using var htmlRenderer = new HtmlRenderer(HtmlStr, path);
+            using var htmlRenderer = new HtmlRenderer(HtmlStr, _path);
             var images = htmlRenderer.ConvertElementsToImages("//*[contains(@class,'must-be-image')]")
                 .ToList();
             Assert.True(images.Any() && images.All(p => p is { Length: > 0 }));
@@ -37,8 +42,7 @@ namespace CommonHtmlConverter.Test
         [Fact]
         public void HtmlRendererUri_Should_ConvertElementOfHtml_To_ImageByteArray()
         {
-            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            using var htmlRenderer = new HtmlRenderer(new Uri("https://www.google.com/"), path);
+            using var htmlRenderer = new HtmlRenderer(new Uri("https://www.google.com/"), _path);
             byte[] image = htmlRenderer.ConvertElementToImage(xpath:"//body");
             Assert.True(image is { Length: > 0 });
         }
@@ -46,8 +50,7 @@ namespace CommonHtmlConverter.Test
         [Fact]
         public void HtmlRendererUri_Should_ConvertElementsOfHtml_To_ImageByteArray()
         {
-            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            using var htmlRenderer = new HtmlRenderer(new Uri("https://www.google.com/"), path);
+            using var htmlRenderer = new HtmlRenderer(new Uri("https://www.google.com/"), _path);
             var images = htmlRenderer.ConvertElementsToImages(xpath:"//input[@type='text']")
                 .ToList();
             Assert.True(images.Any() && images.All(p => p is { Length: > 0 }));

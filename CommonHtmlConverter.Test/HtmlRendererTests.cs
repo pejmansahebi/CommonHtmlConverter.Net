@@ -20,6 +20,10 @@ namespace CommonHtmlConverter.Test
         private const string ValidUriStr = "https://www.google.com/";
         #endregion
 
+        public HtmlRendererTests()
+        {
+        }
+
         #region Tests
         [Theory]
         [ClassData(typeof(CheckStringTestData))]

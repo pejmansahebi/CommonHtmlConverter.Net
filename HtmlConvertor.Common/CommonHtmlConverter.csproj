@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -6,9 +6,11 @@
     <Authors>pejman sahebi</Authors>
     <Product>CommonHtmlConverter</Product>
     <Company>CommonHtmlConverter</Company>
-    <Description>The converter offers a lot of powerful options (convert any web page to image, convert any HTML string to image) it can be used to convert HTML strings that support html5/CSS and any javascript libraries that attach to the HTML page in the CDN server.
+    <Description>The converter offers a lot of powerful options (convert any web page or any html string  to image or pdf) 
 
-first Install-Package Selenium.WebDriver.ChromeDriver package in your application(console app, web app or any .net applications).
+it can be used to convert HTML strings that support html5/CSS and any javascript libraries that attach to the HTML page in the server.
+
+first Install-Package Selenium.WebDriver.ChromeDriver package in your application(console app, web app or any .net applications) and use it!
 </Description>
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

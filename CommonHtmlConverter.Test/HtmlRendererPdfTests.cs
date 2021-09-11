@@ -19,19 +19,17 @@ namespace CommonHtmlConverter.Test
         {
             _path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         }
-        
+
         [Fact]
         public void HtmlRendererFile_Should_ConvertHtml_To_PdfByteArray()
         {
             using var htmlRenderer = new HtmlRenderer(HtmlStr, _path);
             var printOptions = new Dictionary<string, object>
             {
-                //{ "paperWidth", 210 / 25.4 },
-                //{ "paperHeight", 297 / 25.4 },
-                //{ "pageRanges", "1" }
+                { "paperWidth", 210 / 25.4 },
+                { "paperHeight", 297 / 25.4 },
                 //{ "scale", 0.9 },
-                { "pages", "all" },
-                { "paper-size", "a4" }
+                { "pages", "all" }
             };
             var pdf = htmlRenderer.ConvertToPdf(printOptions);
             Assert.True(pdf is { Length: > 0 });
@@ -42,9 +40,10 @@ namespace CommonHtmlConverter.Test
         {
             var printOptions = new Dictionary<string, object>
             {
+                { "paperWidth", 210 / 25.4 },
+                { "paperHeight", 297 / 25.4 },
                 { "scale", 0.8 },
-                { "pages", "all" },
-                { "paper-size", "a4" }
+                { "pages", "all" }
             };
             using var htmlRenderer = new HtmlRenderer(new Uri("https://en.wikipedia.org/wiki/Freedom"), _path);
             byte[] pdf = htmlRenderer.ConvertToPdf(printOptions);

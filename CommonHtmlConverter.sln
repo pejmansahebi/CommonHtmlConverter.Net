@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonHtmlConverter", "HtmlConvertor.Common\CommonHtmlConverter.csproj", "{A3C4E86D-6EA5-40DF-A979-E8C9A2F8B59D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonHtmlConverter.Test", "CommonHtmlConverter.Test\CommonHtmlConverter.Test.csproj", "{CB0871CE-6E18-48AF-BCC8-B4F7CC0AFB51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonHtmlConverter.Test", "CommonHtmlConverter.Test\CommonHtmlConverter.Test.csproj", "{CB0871CE-6E18-48AF-BCC8-B4F7CC0AFB51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

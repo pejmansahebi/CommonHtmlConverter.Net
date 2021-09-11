@@ -2,15 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <PackageId>HtmlConvertor</PackageId>
+    <PackageId>CommonHtmlConverter</PackageId>
     <Authors>pejman sahebi</Authors>
     <Product>EasyHtmlConverter</Product>
     <Company>EasyHtmlConverter</Company>
-    <Description>The converter offers a lot of powerful options (convert any web page to image, convert any HTML string to image) it can be used to convert HTML strings that support html5/CSS and any javascript libraries that attach to the HTML page in the CDN server</Description>
+    <Description>The converter offers a lot of powerful options (convert any web page to image, convert any HTML string to image) it can be used to convert HTML strings that support html5/CSS and any javascript libraries that attach to the HTML page in the CDN server.
+
+first Install-Package Selenium.WebDriver.ChromeDriver package in your application(console app, web app or any .net applications).
+</Description>
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageProjectUrl>https://github.com/pejmansahebi/HtmlConvertor</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/pejmansahebi/HtmlConvertor.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/pejmansahebi/CommonHtmlConverter.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pejmansahebi/CommonHtmlConverter.Net.git</RepositoryUrl>
     <RepositoryType>class library</RepositoryType>
     <PackageTags>HTML Image Selenium HtmlConvertion wrapper</PackageTags>
     <PackageLicenseExpression></PackageLicenseExpression>

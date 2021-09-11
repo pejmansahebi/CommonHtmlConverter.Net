@@ -80,6 +80,7 @@ The second example is convert html string variable to images, there are two h1 e
         }
     }
 ```
+> The options available for the Page.printToPDF call are documented here: (https://chromedevtools.github.io/devtools-protocol/tot/Page/#method-printToPDF)
 
 ## 📝 Important notes
 >- this package use selenium chrome driver so you must be install [requirements-to-run](https://github.com/pejmansahebi/CommonHtmlConverter.Net#-requirements-to-run)

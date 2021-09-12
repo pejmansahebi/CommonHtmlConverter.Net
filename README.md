@@ -1,6 +1,6 @@
 # CommonHtmlConverter
 ## 👩‍🏫 Usage
-- it is a lightweight html converter library written by C# in .net 3.
+- it is a lightweight html converter library written by C# in .net core 3.0.0.
 - it is useful for convert html to pdf and html to image with powerfull html selector "xpath"
 - the converter offers a lot of powerful options (convert any web page or HTML string to image or pdf) it can be used to convert HTML strings that support html5/CSS and any javascript libraries that attach to the HTML page in the CDN server
 

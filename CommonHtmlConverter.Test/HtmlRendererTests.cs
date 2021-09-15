@@ -93,17 +93,6 @@ namespace CommonHtmlConverter.Test
             Assert.Equal("path doesn't exist in your system or server", exception.Message);
         }
 
-        [Theory]
-        [InlineData("http://localhost:12341/")]
-        [InlineData("https://www.google1.com/")]
-        public void HtmlRendererUri_Should_ThrowException_When_WebSiteCantBeReached(string uriString)
-        {
-            Assert.Throws<WebException>(() =>
-            {
-                HtmlRendererWithUriCreator(new Uri(uriString), ExistPath);
-            });
-        }
-
         #endregion
 
         #region Helper methods

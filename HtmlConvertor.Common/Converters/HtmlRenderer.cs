@@ -37,7 +37,6 @@ namespace CommonHtmlConverter.Converters
                 throw new ArgumentException("path doesn't exist in your system or server");
             }
             _webDriverNavigationType = WebDriverNavigationType.Uri;
-            HttpHelper.CheckUri(uri);
             _chromeDriverPath = chromeDriverPath;
             Uri = uri;
         }

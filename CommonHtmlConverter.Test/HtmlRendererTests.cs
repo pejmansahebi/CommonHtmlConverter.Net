@@ -18,7 +18,7 @@ namespace HtmlConvertor.Test
         private const string ExistPath = @"C:\Windows";
         private const string ValidUriStr = "https://www.google.com/";
         #endregion
-
+         
         #region Tests
         [Theory]
         [ClassData(typeof(CheckStringTestData))]

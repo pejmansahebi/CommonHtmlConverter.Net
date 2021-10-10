@@ -3,11 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.3</Version>
+    <Version>1.1.0</Version>
     <Authors>pejman sahebi</Authors>
-    <Description>The converter offers a lot of powerful options (convert any web page or html string to image or pdf) 
+    <Description>The converter offers a lot of powerful options (convert any web page or html string to image or pdf)
 
-it can be used to convert HTML strings that support html5/CSS and any javascript libraries that attach to the HTML page in the server.</Description>
+it can be used to convert HTML strings that support html5/CSS and any javascript libraries that attach to the HTML page in the server.
+</Description>
     <PackageLicenseFile>licence.txt</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/pejmansahebi/CommonHtmlConverter.Net</PackageProjectUrl>
     <PackageIcon>html-128.png</PackageIcon>
@@ -28,11 +29,19 @@ it can be used to convert HTML strings that support html5/CSS and any javascript
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
   </ItemGroup>
 
+  
+  <ItemGroup>
+    <Content Include="chromedriver.exe">
+      <IncludeInPackage>true</IncludeInPackage>
+      <BuildAction>Content</BuildAction>
+      <copyToOutput>true</copyToOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </Content>
+  </ItemGroup>
+
 
   <ItemGroup>
-    <None Update="assets\drivers\chromedriver.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="assets\images\html-128.png">
       <Pack>True</Pack>
     </None>
@@ -44,11 +53,6 @@ it can be used to convert HTML strings that support html5/CSS and any javascript
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="assets\drivers\" />
   </ItemGroup>
 
 </Project>

@@ -3,14 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>pejman sahebi</Authors>
     <Description>The converter offers a lot of powerful options (convert any web page or html string to image or pdf) 
 
-it can be used to convert HTML strings that support html5/CSS and any javascript libraries that attach to the HTML page in the server.
-
-first Install-Package Selenium.WebDriver.ChromeDriver package in your application(console app, web app or any .net applications) and use it!
-</Description>
+it can be used to convert HTML strings that support html5/CSS and any javascript libraries that attach to the HTML page in the server.</Description>
     <PackageLicenseFile>licence.txt</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/pejmansahebi/CommonHtmlConverter.Net</PackageProjectUrl>
     <PackageIcon>html-128.png</PackageIcon>

@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HtmlConvertor.Common\CommonHtmlConverter.csproj" />
+    <ProjectReference Include="..\HtmlConvertor\HtmlConvertor.csproj" />
   </ItemGroup>
 
 </Project>

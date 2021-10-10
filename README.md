@@ -1,12 +1,12 @@
-# CommonHtmlConverter
+# Html Convertor
 ## 👩‍🏫 Usage
 - it is a lightweight html converter library written by C# in .net core 3.0.0.
 - it is useful for convert html to pdf and html to image with powerfull html selector "xpath"
 - the converter offers a lot of powerful options (convert any web page or HTML string to image or pdf) it can be used to convert HTML strings that support html5/CSS and any javascript libraries that attach to the HTML page in the CDN server
 
 ## 📦NuGet :
-Install using nuget https://www.nuget.org/packages/CommonHtmlConverter/
->**Install-Package CommonHtmlConverter**
+Install using nuget https://www.nuget.org/packages/HtmlConvertor/
+>**Install-Package HtmlConvertor**
 
 ## 🛠 Requirements to run:
 First Install-Package Selenium.WebDriver.ChromeDriver package in your application(console app, web app or any .net applications).

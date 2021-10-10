@@ -7,7 +7,12 @@
 ## 📦NuGet :
 Install using nuget https://www.nuget.org/packages/HtmlConvertor/
 >**Install-Package HtmlConvertor**
- 
+
+## 🛠 Requirements to run:
+First Install-Package Selenium.WebDriver.ChromeDriver package in your application(console app, web app or any .net applications).
+* [Selenium.WebDriver.ChromeDriver](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver)
+> install this package is so important
+
 ## Convert web page html to image example
 The first sample is convert google body element to image so you can easily use this code in your program.cs file
 ```csharp

@@ -23,6 +23,7 @@ first Install-Package Selenium.WebDriver.ChromeDriver package in your applicatio
     <PackageIcon>html-128.png</PackageIcon>
     <PackageIconUrl />
     <Version>1.0.1</Version>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

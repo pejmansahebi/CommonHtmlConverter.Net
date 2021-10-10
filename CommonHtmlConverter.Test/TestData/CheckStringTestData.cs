@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace CommonHtmlConverter.Test.TestData
+namespace HtmlConvertor.Test.TestData
 {
     public class CheckStringTestData : IEnumerable<object[]>
     {

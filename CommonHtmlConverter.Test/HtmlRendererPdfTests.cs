@@ -5,7 +5,7 @@ using System.Reflection;
 using HtmlConvertor.Converters;
 using Xunit;
 
-namespace CommonHtmlConverter.Test
+namespace HtmlConvertor.Test
 {
     public class HtmlRendererPdfTests
     {

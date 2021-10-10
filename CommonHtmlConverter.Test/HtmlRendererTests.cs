@@ -1,8 +1,7 @@
 ﻿using System;
 using System.IO;
-using System.Net;
-using CommonHtmlConverter.Converters;
 using CommonHtmlConverter.Test.TestData;
+using HtmlConvertor.Converters;
 using Xunit;
 
 namespace CommonHtmlConverter.Test

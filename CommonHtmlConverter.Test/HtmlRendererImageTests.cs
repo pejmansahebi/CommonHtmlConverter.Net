@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using CommonHtmlConverter.Converters;
+using HtmlConvertor.Converters;
 using Xunit;
 
 namespace CommonHtmlConverter.Test

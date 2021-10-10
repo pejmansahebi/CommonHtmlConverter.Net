@@ -33,6 +33,9 @@ first Install-Package Selenium.WebDriver.ChromeDriver package in your applicatio
 
 
   <ItemGroup>
+    <None Update="assets\drivers\chromedriver.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="assets\images\html-128.png">
       <Pack>True</Pack>
     </None>
@@ -44,6 +47,11 @@ first Install-Package Selenium.WebDriver.ChromeDriver package in your applicatio
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="assets\drivers\" />
   </ItemGroup>
 
 </Project>

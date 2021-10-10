@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonHtmlConverter", "HtmlConvertor.Common\CommonHtmlConverter.csproj", "{A3C4E86D-6EA5-40DF-A979-E8C9A2F8B59D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonHtmlConverter.Test", "CommonHtmlConverter.Test\CommonHtmlConverter.Test.csproj", "{CB0871CE-6E18-48AF-BCC8-B4F7CC0AFB51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlConvertor.Test", "CommonHtmlConverter.Test\HtmlConvertor.Test.csproj", "{CB0871CE-6E18-48AF-BCC8-B4F7CC0AFB51}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlConvertor", "HtmlConvertor\HtmlConvertor.csproj", "{BAFE3BA7-71A3-4612-A28E-E63560E518A4}"
 EndProject
@@ -20,10 +18,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A3C4E86D-6EA5-40DF-A979-E8C9A2F8B59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3C4E86D-6EA5-40DF-A979-E8C9A2F8B59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3C4E86D-6EA5-40DF-A979-E8C9A2F8B59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3C4E86D-6EA5-40DF-A979-E8C9A2F8B59D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CB0871CE-6E18-48AF-BCC8-B4F7CC0AFB51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CB0871CE-6E18-48AF-BCC8-B4F7CC0AFB51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB0871CE-6E18-48AF-BCC8-B4F7CC0AFB51}.Release|Any CPU.ActiveCfg = Release|Any CPU

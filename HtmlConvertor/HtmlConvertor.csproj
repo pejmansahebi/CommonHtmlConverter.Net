@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <Authors>pejman sahebi</Authors>
     <Description>The converter offers a lot of powerful options (convert any web page or html string to image or pdf)
 
@@ -45,11 +45,11 @@ it can be used to convert HTML strings that support html5/CSS and any javascript
     <None Update="assets\images\html-128.png">
       <Pack>True</Pack>
     </None>
-    <None Include="assets\images\html-128.png">
+    <None Update="licence.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="licence.txt">
+    <None Include="assets\images\html-128.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
